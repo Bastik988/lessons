@@ -75,5 +75,6 @@ public class daitLesson {
         String string = sc.nextLine();
         LocalDateTime localDate = LocalDateTime.parse(string, formatter);
         System.out.println(localDate);
+        System.out.println(localDate);
     }
 }
