@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -20,11 +21,13 @@ public class NewYear {
         String dateNewYear = "01-01-"+newYear;
         LocalDate dateTimeNewYear = LocalDate.parse(dateNewYear, formatter);
         LocalTime timeNewYear = LocalTime.parse(newYearTime, formatterTime);
+        Duration duration = Duration.between(timeNewYear, polNewYear);
+//        System.out.println(duration);
         int days = (int) ChronoUnit.DAYS.between(date, dateTimeNewYear);
-        int hours = (int) ChronoUnit.HOURS.between(polNewYear, timeNewYear);
-        int min = (int) ChronoUnit.MINUTES.between(polNewYear, timeNewYear);
-        int sec = (int) ChronoUnit.SECONDS.between(polNewYear, timeNewYear);
-        System.out.println("До нового года осталось: "+ days +" дней и "+ hours +":"+ min +":"+ sec);
+//        int hours = (int) ChronoUnit.HOURS.between(polNewYear, timeNewYear);
+//        int min = (int) ChronoUnit.MINUTES.between(polNewYear, timeNewYear);
+//        int sec = (int) ChronoUnit.SECONDS.between(polNewYear, timeNewYear);
+        System.out.println("До нового года осталось: "+ days +" дней и " + duration);
 
 //        int newYearMonth = 1;
 //        int newYearMonthDay = 1;
