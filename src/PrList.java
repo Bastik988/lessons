@@ -84,6 +84,7 @@ public class PrList {
                         k++;
                     }
                 }
+
                 System.out.println("Событие удалено!");
                 System.out.println(list2);
                 break;
